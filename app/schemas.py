@@ -33,5 +33,37 @@ class TokenUsage(BaseModel):
     total_tokens: int
 
 class LLMResponse(BaseModel):
+    id: int
     llm_result: str
     llm_token_info: TokenUsage
+    
+class LLMResultResponse(BaseModel):
+    id: int
+    prompt_id: int
+    model_name: str
+    api_provider: str
+    response_text: str
+    token_usage: str
+    executed_at: datetime
+
+class ReviewCreate(BaseModel):
+    llm_result_id: int
+    rating: int
+    feedback: Optional[str] = None
+
+class ReviewResponse(BaseModel):
+    id: int
+    llm_result_id: int
+    rating: int
+    feedback: Optional[str]
+    reviewed_at: datetime
+
+class LLMResultEditCreate(BaseModel):
+    llm_result_id: int
+    edited_text: str
+
+class LLMResultEditResponse(BaseModel):
+    id: int
+    llm_result_id: int
+    edited_text: str
+    edited_at: datetime
