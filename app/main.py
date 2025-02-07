@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from app.db import init_db
-from app.routers import prompt, llm  # 여러 개의 라우터 추가
+from app.routers import prompt, llm, review  # 여러 개의 라우터 추가
 
 app = FastAPI(
     title="Prompt Engineering API",
@@ -14,6 +14,7 @@ init_db()
 # API 라우터 등록
 app.include_router(prompt.router)
 app.include_router(llm.router)
+app.include_router(review.router)
 
 # 기본 라우트
 @app.get("/")
