@@ -26,6 +26,8 @@ class LLMRequest(BaseModel):
     role: Optional[str] = None   # 역할을 별도 필드로 분리
     variables: Dict[str, str]    # 프롬프트 본문에서 사용할 변수
     use_azure: bool = False      # Azure API 사용 여부
+    api_provider: str  # OpenAI 또는 Azure OpenAI
+    model_name: str    # gpt-4o 또는 gpt-4o-mini
 
 class TokenUsage(BaseModel):
     completion_tokens: int
