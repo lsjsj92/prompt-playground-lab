@@ -35,7 +35,7 @@ prompt-tuning/
 
 # How to use?
 
-![info](asset/info.PNG){width=800}  
+![info](asset/info.png){width=800}  
 
 1. Install MySQL or MariaDB  
     1-1. Set user  
@@ -56,7 +56,7 @@ prompt-tuning/
     '''  
 5. Run fastapi server (Automatically proceed with database table setting)   
     - uvicorn app.main:app --reload   
-    ![info](asset/api.PNG){width=400}   
+    ![info](asset/api.png){width=400}   
 6. (OPTION, insert test data) mysql -u root -p < insert_test_data.sql  
 7. Run streamlit server  
     - streamlit run web/main.py --server.port 8501  
