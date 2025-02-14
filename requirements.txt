@@ -5,3 +5,4 @@ sqlalchemy
 pydantic
 python-dotenv
 cryptography
+st-pages
