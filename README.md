@@ -41,9 +41,9 @@ prompt-tuning/
     1-1. Set user  
     1-2. Create database named 'prompt_db'  
 2. Set python env  
-3. Install python libaray(w/ requirements.txt)  
+3. Install python library(w/ requirements.txt)  
 4. Write .env  
-    4-1. Change the .env.tmp file namt to .env  
+    4-1. Change the .env.tmp file name to .env  
     4-2. Write content in .env  
     '''   
     DB_USER=    
